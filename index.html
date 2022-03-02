@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa 01</title>
+    <script src="https://kit.fontawesome.com/50c13d7ffc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="index1.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="funciones.js"></script>
+</head>
+<body align="center">
+    <header class="header">
+        <h1 class="title-header"><i class="fas fa-exchange-alt"></i> Conversiones</h1>
+    </header>
+    <div id="container">
+        <h4>Convertir</h4>
+        <table style="margin-left: 0px;">
+            <tr>
+                <td>Valor:</td>
+                <td></td>
+                <td>De:</td>
+                <td></td>
+            </tr>
+            <tr align="center">
+                <td valign="middle" style="width:68%">
+                    <input placeholder="Ingrese un valor" id="value" class="value form-control form-control-sm" onkeyup="this.value=Numeroshex(this.value)">
+                </td>
+                <td></td>
+                <td valign="middle" style="width:20%">
+                    <select id="base" class="form-select">
+                        <option selected value="1">Base 10</option>
+                        <option value="2">Base 2</option>
+                        <option value="3">Base 8</option>
+                        <option value="4">Base 16</option>
+                    </select>
+                </td>
+                <td valign="middle">
+                    <button type="button"class="btn btn-primary" id="btn-cambio">
+                        Aceptar
+                    </button>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <div class="card shadow-sm course-item lh-sm" id="c-sha">
+            <div class="card-body">
+                <h5 class="mb-2 text-truncate-3 small fw-bold">
+                    <div id="encabezado-title"><h2><b style="font-size:1.2em;">|</b>Resultados</h2></div>
+                        <table align="left" cellspacing="1">
+                            <tr>
+                                <td style="width:300px" colspan="2">Decimal</td>
+                                <td style="width:300px" colspan="2">Binario</td>
+                                
+                            </tr>
+                            <tr>
+                                <td style="width:40%" >
+                                    <input type="text" class="decimalbin form-control input" style="width:300px;" id="input_nu" maxlength="256" placeholder="DECIMAL" >
+                                </td>
+                                <td style="width:300px">&nbsp;</td>
+                                <td style="width:40%">
+                                    <input type="text" class="bindecimal form-control input" style="width:300px;" id="input_nu1" maxlength="256" placeholder="BINARIO">
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td style="width:300px" colspan="2">Octal</td>
+                                <td style="width:300px" colspan="2">Hexadecimal</td>
+                            </tr>
+                            <tr>
+                                <td style="width:40%">
+                                    <input type="text" class="decimalbin form-control input" style="width:300px;" id="input_nu2" maxlength="256" placeholder="OCTAL">
+                                </td>
+                                <td style="width:300px">&nbsp;</td>
+                                <td style="width:40%">
+                                    <input type="text" class="decimalbin form-control input" style="width:300px;" id="input_nu3" maxlength="256" placeholder="HEXADECIMAL">
+                                </td>
+                            </tr>
+                        </table>
+                    
+                </h5>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
