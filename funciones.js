@@ -63,7 +63,7 @@ $(document).ready(function () {
                     if (filtro.indexOf(str.charAt(i2)) != -1)
                         str_end2 += str.charAt(i2);
                 
-                $("#input_nu2").val(str_end);
+                $("#input_nu2").val(str_end2);
                 $("#input_nu2").focus();
                 if (str_end2.includes(".")) {
                     let numoct0 = str_end2.split(".")[0];
