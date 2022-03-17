@@ -23,12 +23,12 @@
             <tr>
                 <td>Valor:</td>
                 <td></td>
-                <td>De:</td>
+                <td>Base de origen:</td>
                 <td></td>
             </tr>
             <tr align="center">
                 <td valign="middle" style="width:68%">
-                    <input placeholder="Ingrese un valor" id="value" class="value form-control form-control-sm" onkeyup="this.value=Numeroshex(this.value)">
+                    <input placeholder="Ingrese un valor" value="0" id="value" class="value form-control form-control-sm" onkeyup="this.value=Numeroshex(this.value)">
                 </td>
                 <td></td>
                 <td valign="middle" style="width:20%">
@@ -41,9 +41,16 @@
                 </td>
                 <td valign="middle">
                     <button type="button"class="btn btn-primary" id="btn-cambio">
-                        Aceptar
+                        Convertir
                     </button>
                 </td>
+            </tr>
+            <tr>
+                <td>
+                    Caracteres permitidos: <b>0123456789ABCDEF.-</b>
+                </td>
+                <td></td>
+                <td></td>
             </tr>
         </table>
         <br>
