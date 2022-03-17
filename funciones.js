@@ -1,4 +1,14 @@
 $(document).ready(function () {
+    let input = document.getElementById("value");
+    if ($("#value").val().trim().length == 0) {
+        $("#value").val('0');
+    }
+    input.addEventListener("keyup", function (event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            $("#btn-cambio").click();
+       }
+    });
     $("#btn-cambio").click(function () {
         let op1 = ($("#base").prop('selectedIndex'));
         let str = $('.value').val();
@@ -7,9 +17,8 @@ $(document).ready(function () {
                 var str_end = '';
                 var filtro = '1234567890.';
                 for (var i = 0; i < str.length; i++)
-                    if (filtro.indexOf(str.charAt(i)) != -1) 
+                    if (filtro.indexOf(str.charAt(i)) != -1)
                         str_end += str.charAt(i);
-                
                 let decimales = parseFloat(str_end);
                 $("#input_nu").val(decimales);
                 $("#input_nu").focus();
@@ -27,7 +36,6 @@ $(document).ready(function () {
                 for (var i1 = 0; i1 < str.length; i1++)
                     if (filtro.indexOf(str.charAt(i1)) != -1)
                         str_end1 += str.charAt(i1);
-                
                 $("#input_nu1").val(str_end1);
                 $("#input_nu1").focus();
                 //Dividir num en 2
@@ -42,7 +50,7 @@ $(document).ready(function () {
                     let valor_entero = parseInt(num0, 2);
                     
                     numero_completo1 = parseFloat(valor_entero + '.' + (parte_decimal.toString().split(".")[1]));
-                    console.log(numero_completo1);
+                    
                 } else {
                     numero_completo1 = parseInt(str_end1, 2);
                 }
@@ -95,6 +103,7 @@ $(document).ready(function () {
                         str_end3 += str.charAt(i3);
                 
                 $("#input_nu3").val(str_end3);
+               
                 $("#input_nu3").focus();
                 if (str_end3.includes(".")) {
                     
@@ -127,12 +136,13 @@ $(document).ready(function () {
                                 break;
                             }
                     }
+                    
                     //Recorrer Array
                     let parte_hex_decimal = 0;
                     for (let h = 0; h < numhex1.length; h++) {
                         parte_hex_decimal += parseInt(array[h]) * Math.pow(16, -1 * (h + 1));
                     }
-                    console.log(parte_hex_decimal);
+                    
                     let hex = parseInt(numhex0, 16);
                     //Pasa el valor a decimal
                     num_hex = parseFloat(hex + '.' + (parte_hex_decimal.toString().split(".")[1]));
